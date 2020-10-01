@@ -1,0 +1,45 @@
+<ion-content>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-buttons slot="start">
+          <ion-back-button text="" mode="md"></ion-back-button>
+        </ion-buttons>
+      </ion-buttons>
+      <!-- <ion-buttons slot="end">
+        <ion-button (click)="presentPopover($event)">
+          <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </ion-buttons> -->
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="about-header">
+    <!-- Instead of loading an image each time the select changes, use opacity to transition them -->
+    <div class="about-image madison" [ngStyle]="'madison' && {'opacity': '1'}"></div>
+    <!-- <div class="about-image austin" [ngStyle]="location === 'austin' && {'opacity': '1'}"></div>
+    <div class="about-image chicago" [ngStyle]="location === 'chicago' && {'opacity': '1'}"></div>
+    <div class="about-image seattle" [ngStyle]="location === 'seattle' && {'opacity': '1'}"></div> -->
+  </div>
+
+  <div class="about-info">
+    <h3 class="ion-padding-top ion-padding-start">Bob</h3>
+
+    <p class="ion-padding-start ion-padding-end">
+     <!-- <b style="color: white;"> Detalhe do broduto dslfjsjdgfsdfksdkfndsjanaslçjdnas</b> <br>
+     <b style="font-size: 14px;">DETALHES:</b> <br> -->
+     <b style="font-size: 12px;">Descrição: </b> 3 meses <br>
+     <!-- <b style="font-size: 12px;">PORTE: </b> Medio <br>
+     <b style="font-size: 12px;">COR: </b> Caramelo <br>
+     <b style="font-size: 12px;">RAÇA: </b> Misto <br>
+     <b style="font-size: 12px;">SEXO: </b> Macho <br> -->
+    </p>
+    
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border" style="align-items: center;">
+  <ion-toolbar>
+    <ion-button expand="full"><b>Adicionar ao carrinho</b></ion-button>
+  </ion-toolbar>
+</ion-footer>

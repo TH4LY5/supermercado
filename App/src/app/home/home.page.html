@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <!-- <ion-button  (click)="abrirFiltro()"><ion-icon name="filter-outline"></ion-icon></ion-button> -->
+    </ion-buttons>
+    <ion-title style="text-align: center; color:mediumblue" ><b>SUPERMERCADO</b></ion-title>
+    <ion-buttons slot="end">
+      <!-- <ion-menu-button></ion-menu-button> -->
+      <ion-button  (click)="abrirFiltro()"><ion-icon name="cart-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+  
+  <ion-slides [options]="slideOpt">
+    <ion-slide *ngFor="let card of patro" style="width: 250px; height: 200px; border: 2px solid #f8f8f8; ">
+      <ion-col>
+        <ion-img (click)="abriDescricao();" style="pointer-events:none; border-radius: 6px;"
+          src={{card.img}}></ion-img>  
+          <!-- <ion-label style="text-align: start;">{{card.nome}}</ion-label> -->
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+
+  <div>
+
+  <p style="padding: 10px;"><b>Em Destaque </b><ion-button style="align-self: flex-end;" size="small" fill="outline" (click)="todos();">Ver todos</ion-button> </p>
+</div>
+  
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+    <ion-slide *ngFor="let card of [0,1,2,3,4,5,6]" style="width: 150px; height: 300px; border: 2px solid #f8f8f8;">
+      <ion-col>
+        <ion-img (click)="abriDescricao();" style="pointer-events:none; "
+          src="https://apoioentrega.vteximg.com.br/arquivos/ids/450825/10713.jpg"></ion-img>
+        <ion-label style="text-align: start;">Arroz R$:17,00 </ion-label>
+        <ion-button shape="block" fill="outline" (click)="abriDescricao();">Ver Mais</ion-button>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+
+  <div>
+    <p style="padding: 10px;"><b>Produtos novos </b><ion-button style="align-self: flex-end;" size="small" fill="outline">Ver mais</ion-button> </p>
+  </div>
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+    <ion-slide *ngFor="let card of produto" style="width: 150px; height: 200px; border: 2px solid #f8f8f8;">
+      <ion-col>
+        <ion-img style="pointer-events:none; "
+          src="{{card.img}}"></ion-img>
+        <ion-label style="text-align: start;">{{card.nome}} - {{card.preco}}</ion-label>
+        <ion-button shape="block" fill="outline" (click)="abriDescricao();">Ver Mais</ion-button>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>

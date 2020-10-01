@@ -1,0 +1,46 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-searchbar showCancelButton="never"></ion-searchbar> -->
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let prod of produto">
+      <ion-card-header>
+        <ion-img (click)="abriDescricao();" style="pointer-events:none; border-radius: 6px;"
+        src={{prod.img}}></ion-img>  
+        <ion-card-title style="text-align: center;">
+          {{prod.nome}} - {{prod.preco}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <ion-button color="primary" expand="full" (click)="abriDescricao();">Ver</ion-button> -->
+        <!-- <ion-row class="ion-aling-itens-center">
+          <ion-col size="4" class="ion-text-right">
+            <ion-button fill="clear" >
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+           
+
+          </ion-col>
+        </ion-row> -->
+      </ion-card-content>
+    </ion-card>
+
+  </ion-list>
+</ion-content>
+
+
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <h4 style="text-align: center; color: blue;"> <b>Total: R$43,80</b></h4>
+    <ion-button expand="full" color="primary" > <b>FECHAR COMPRA</b></ion-button>
+  </ion-toolbar>
+</ion-footer>

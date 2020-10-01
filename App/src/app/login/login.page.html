@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-img style="width: 100px; height: 100px;" [src]="https://uploaddeimagens.com.br/images/002/873/030/original/logo.jpg"></ion-img> -->
+  <div >
+    <!-- <ion-img style="width: 200px; height:200px; padding: 30px;" src="https://uploaddeimagens.com.br/images/002/879/447/full/logo.jpg"></ion-img> -->
+    <h3 style="color:mediumblue; text-align: center;"><b>SUPERMERCADO</b></h3>
+  </div> 
+  <ion-card style="border-radius: 6px;">
+    <ion-card-subtitle style="text-align: center;"><b>Bem vindo!</b></ion-card-subtitle>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input style="border-radius: 6px; background-color: bisque;" ></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input style="border-radius: 6px; background-color: bisque;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" style="border-radius: 5px;" (click)="login()" color="primary">Entrar</ion-button>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar (click)="registrar()">
+    <ion-title style="text-align: center;"><b>Registrar</b></ion-title>
+  </ion-toolbar>
+</ion-footer>
